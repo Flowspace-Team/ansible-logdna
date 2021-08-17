@@ -10,7 +10,7 @@
 
 - name: Install LogDNA Agent
   apt:
-    state: present
+    state: "{{ agent_install_state }}"
     name: logdna-agent
     allow_unauthenticated: true
     update_cache: true

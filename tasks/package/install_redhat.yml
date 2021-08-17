@@ -9,4 +9,6 @@
     gpgcheck: false
 
 - name: Install LogDNA Agent
-  yum: state=present name=logdna-agent
+  yum:
+    state: "{{ agent_install_state }}"
+    name: logdna-agent
